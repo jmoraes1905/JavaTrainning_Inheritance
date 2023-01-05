@@ -32,4 +32,9 @@ public class BusinessAccount extends Account {
 			//We need to make the balance attribute protected instead of private to visualize in the subclass
 			balance += amount - loanTax;
 	}
+	@Override
+	public void withdraw(double amount) {
+		super.withdraw(amount);
+		balance-=2.00;
+	}
 }

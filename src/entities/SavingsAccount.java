@@ -24,4 +24,10 @@ public class SavingsAccount extends Account{
 	public void updateBalance() {
 		balance+=balance*this.interestRate;
 	}
+	//The withdraw method is overwritten so that withdrawing from this king of account is tax free
+	//Use the word @Override to sign the overwritting
+	@Override
+	public void withdraw(double amount) {
+		balance -=amount;
+	}
 }

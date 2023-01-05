@@ -5,6 +5,7 @@ public class Account {
 	private Integer number;
 	private String holder;
 	protected Double balance;
+	protected Double withdrawTax = 5.00;
 	
 	public Account() {
 		
@@ -37,7 +38,7 @@ public class Account {
 	}
 
 	public void withdraw(double amount) {
-		 this.balance-=amount;
+		 this.balance-=(amount + withdrawTax);
 	}
 
 	public void deposit(double amount) {

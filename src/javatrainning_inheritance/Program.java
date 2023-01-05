@@ -37,6 +37,25 @@ public class Program {
 			acc5.updateBalance();
 			System.out.println("Balance updated!");
 		}
+		
+		acc.deposit(1000.00);
+		acc.withdraw(200.00);
+		System.out.printf("%s balance: ", acc.getHolder());
+		System.out.println(acc.getBalance());
+		
+		//Savings Account instantiated 
+		Account sacc = new SavingsAccount(1010, "Junior", 1340.00, 0.5);
+		//withdraw without taxes. Overwritten withdraw
+		sacc.withdraw(256.00);
+		System.out.printf("%s balance: ", sacc.getHolder());
+		System.out.println(sacc.getBalance());
+		
+		Account bacc1 = new BusinessAccount(1011, "Miles", 15558.25, 5000.00);
+		//withdraw with extra taxes.Overwritten withdraw
+		bacc1.withdraw(1200.00);
+		System.out.printf("%s balance: ", bacc1.getHolder());
+		System.out.println(bacc1.getBalance());
+		
 	}
 
 }
